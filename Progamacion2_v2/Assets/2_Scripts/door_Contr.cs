@@ -7,7 +7,7 @@ public class door_Contr : MonoBehaviour
     public Animator door;
     private bool inZone;
     private bool active;
-    public GameObject key;
+    
     
 
     void Update()
@@ -17,7 +17,7 @@ public class door_Contr : MonoBehaviour
         {
             active = !active;
 
-            if (active == true && key.activeSelf)
+            if (active == true )
             {
 
                 door.SetBool("DoorAct", true);
@@ -34,7 +34,7 @@ public class door_Contr : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Key")
         {
             inZone = true;
         }

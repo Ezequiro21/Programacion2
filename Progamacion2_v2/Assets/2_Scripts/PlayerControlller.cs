@@ -39,12 +39,12 @@ public class PlayerControlller : MonoBehaviour
         if(Physics.Raycast(transform.position, floor, 1.03f))
         {
             floorDetected = true;
-            print("contacto con el suelo");
+            
         }
         else
         {
             floorDetected = false;
-            print("no hay contacto");
+            
         }
 
         isjump = Input.GetButtonDown("Jump");
